@@ -1,7 +1,11 @@
+import HeadreUrl from "./HeadreUrl";
+import UrlShortener from "./UrlShortener";
+
 function App() {
   return (
     <div className="App">
-    <h1>Hello</h1>
+      <HeadreUrl/>
+   <UrlShortener/>
     </div>
   );
 }
