@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import HeadreUrl from "./HeadreUrl";
 import UrlShortener from "./UrlShortener";
 
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <HeadreUrl/>
    <UrlShortener/>
+   <Footer/>
     </div>
   );
 }
