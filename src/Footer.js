@@ -2,21 +2,22 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='bg-[#0b1736] mt-16 rounded-lg'>
-       <div className='flex place-content-evenly'>
-       <div className='pt-16 p-10'>
+    <div className="bg-[#0b1736]  bg-[url('https://url-shortner-app-react.netlify.app/assets/bg-boost-desktop.05593952.svg')] bg-cover bg-no-repeat mt-12">
+       <div className='flex flex-col md:flex-row place-content-evenly'>
+       <div className='pt-16 p-10 text-center md:text-left'>
         <h1 className="font-mono text-white text-5xl">
             Url <span className="text-orange-400 font-mono text-5xl">Shortener</span>
           </h1>
           <div className='mt-10'>
-         <p className='text-white font-bold text-xl'>8590799730</p>
+        <a href="https://www.linkedin.com/in/subin-sabu-b0b610224/"> <p className='text-white font-bold text-xl'> https://www.linkedin.com/in/subin-sabu-b0b610224/</p></a>
           </div>
-          <div className='mb-44'>
-              <p className='font-bold text-white text-xl'>subinsabu148@gmail.com</p>
+          <div className='md:mb-44'>
+             
+             <a href="https://github.com/dev-subin"> <p className='font-bold text-white text-xl'> https://github.com/dev-subin</p></a>
           </div>
         </div>
-        <div className='mt-36 text-white font-bold'>
-            <div className='mt-10'>
+        <div className='md:mt-36 text-white font-bold text-center md:text-left'>
+            <div className='md:mt-10'>
                 <p>About us</p>
             </div>
             <div className='mt-5'>
@@ -29,7 +30,7 @@ const Footer = () => {
                 <p>Blogs</p>
             </div>
         </div>
-        <div className='mt-36  text-white font-bold'>
+        <div className='md:mt-36 text-center md:text-left text-white font-bold'>
             <div className='mt-10'>
                 <p>Contact us</p>
             </div>
@@ -40,7 +41,7 @@ const Footer = () => {
                 <p>Privacy</p>
             </div>
         </div>
-       <div className='flex flex-row mt-44'>
+       <div className='flex flex-row justify-center items-center mt-12 md:mt-44 mb-12'>
        <div className='text-white ml-10 flex place-content-evenly'>
        <a href="#"><i className='' class="fa-brands fa-facebook"></i></a>
        </div>
