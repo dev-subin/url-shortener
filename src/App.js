@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Footer from "./Footer";
 import HeadreUrl from "./HeadreUrl";
 import UrlShortener from "./UrlShortener";
