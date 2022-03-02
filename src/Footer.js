@@ -43,13 +43,13 @@ const Footer = () => {
         </div>
        <div className='flex flex-row justify-center items-center mt-12 md:mt-44 mb-12'>
        <div className='text-white ml-10 flex place-content-evenly'>
-       <a href="#"><i  className="fa-brands fa-facebook"></i></a>
+           <i  className="fa-brands fa-facebook"></i>
        </div>
        <div className='text-white ml-10 '>
-       <a href="#"><i className="fa-brands fa-twitter"></i></a>
+       <i className="fa-brands fa-twitter"></i>
        </div>
        <div className='text-white ml-10'>
-           <a href="#"><i className="fa-brands fa-instagram-square"></i></a>
+           <i className="fa-brands fa-instagram-square"></i>
        </div>
        </div>
        </div>
