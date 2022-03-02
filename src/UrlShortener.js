@@ -5,11 +5,9 @@ import { CopyToClipboard } from "react-copy-to-clipboard/lib/Component";
 const getLocalData = () => {
   let list = JSON.parse(localStorage.getItem("lists"));
   if (list) {
+    list.reverse()
     if(list.length>3){
       list.shift()
-    }
-    if(list){
-      list.unshift()
     }
     return list;
   } else {
@@ -31,7 +29,6 @@ const UrlShortener = () => {
       .get(`https://api.shrtco.de/v2/shorten?url=${inputValue}`)
       .then((res) => {
         setShortenLink([...shortenLink, res.data.result.full_short_link]);
-        console.log(res);
         setInputValue("");
         setLoader(false);
         getLocalData()
@@ -53,7 +50,7 @@ const UrlShortener = () => {
       className="bg-white w-auto md:w-full overflow-x-hidden	
     overflow-y-hidden sm:overflow-x-hidden sm:overflow-y-hidden z-[-1]  "
     >
-      <div className="flex place-content-between flex-col items-center md:items-center md:flex-row lg:flex-row xl:flex-row">
+      <div className="flex place-content-between flex-col items-center md:items-center md:flex-col lg:flex-row xl:flex-row">
         <div className=" w-12/12 md:6/12 mt-20 md:mt-12 ml-10">
           <div className="">
             <h1 className=" text-3xl md:text-6xl text-center md:text-left  font-bold">
@@ -85,8 +82,8 @@ const UrlShortener = () => {
             to shorten long page URL's
           </p>
         </div>
-        <div className="  font-bold p-5 text-2xl md:text-4xl cursor-pointer hover:scale-90">
-          <h1 className=" font-mono text-black mt-8  text-center">
+        <div className="  font-bold p-5 text-2xl md:text-4xl cursor-pointer hover:scale-90 animate-bounce">
+          <h1 className=" font-mono text-black   text-center">
             Url <span className="text-orange-400 font-sans">Shortener</span>
           </h1>
         </div>
@@ -123,7 +120,7 @@ const UrlShortener = () => {
             <div key={index} >
              
               <CopyToClipboard text={value} onCopy={copy}>
-              <p className="border-2 bg-white text-black cursor-pointer h-16 rounded-lg text-center p-5 text-base md:text-xl mx-16 my-4" >
+              <p className="border-2 bg-white text-black cursor-pointer h-16 rounded-lg text-center p-5 text-base md:text-xl mx-16 my-4 hover:scale-105" >
                 {value}
               </p>
               </CopyToClipboard>
@@ -145,7 +142,7 @@ const UrlShortener = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col text-center md:flex-row place-content-between md:place-content-evenly">
+        <div className="flex flex-col text-center md:flex-col lg:flex-row place-content-between md:place-content-evenly">
           <div className="flex flex-col">
             <div className="mt-10 flex justify-center items-center">
               <img
